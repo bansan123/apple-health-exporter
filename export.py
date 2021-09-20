@@ -35,11 +35,11 @@ def health_xml_to_feather(zip_file, output_file, remove_zip=False):
         os.remove(zip_file)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Export latest Apple Health zip to Feather data file.")
-    parser.add_argument("input_file", help="path to export.zip file")
-    parser.add_argument("output_file", help="path to output file")
-    parser.add_argument("--remove_zip", dest="remove_zip", action="store_true",
-                        help="delete zip after extraction (default: false)")
-    args = parser.parse_args()
-    health_xml_to_feather(args.input_file, args.output_file, args.remove_zip)
+    # parser = argparse.ArgumentParser(
+    #     description="Export latest Apple Health zip to Feather data file.")
+    # parser.add_argument("input_file", help="./export.zip")
+    # parser.add_argument("output_file", help="./data")
+    # parser.add_argument("--remove_zip", dest="remove_zip", action="store_true",
+    #                     help="false")
+    # args = parser.parse_args()
+    health_xml_to_feather("./export.zip", "./data", False)
